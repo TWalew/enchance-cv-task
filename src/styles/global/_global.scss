@@ -12,3 +12,41 @@
           box-shadow: 0 0 0 0.25rem $button-green-shadow;
      }
 }
+
+.custom-tooltip {
+     position: relative;
+     background-color: white;
+     top: -175px;
+     border: 1px solid lightgray;
+     border-radius: 7px;
+     width: 50%;
+
+     &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -7px;
+          height: 12px;
+          width: 12px;
+          margin: 0 auto;
+          z-index: 1;
+          border-radius: 0;
+          background-color: white;
+          transform: rotate(45deg);
+          border-bottom: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+     }
+
+     &__header {
+          font-weight: 500;
+          background-color: whitesmoke;
+          padding: 0.5rem 0.85rem;
+          border-bottom: 1px solid lightgray;
+     }
+
+     &__body {
+          padding: 0.85rem;
+          font-size: 14px;
+     }
+}
